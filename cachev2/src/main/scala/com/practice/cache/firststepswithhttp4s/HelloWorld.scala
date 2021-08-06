@@ -1,4 +1,4 @@
-package com.practice.cache
+package com.practice.cache.firststepswithhttp4s
 
 import cats.Applicative
 import cats.implicits._
