@@ -1,17 +1,15 @@
-package com.practice.cache
+package com.practice.cache.firststepswithhttp4s
 
 import cats.effect.Sync
 import cats.implicits._
-import io.circe.{Decoder, Encoder}
 import io.circe.generic.semiauto.{deriveDecoder, deriveEncoder}
+import io.circe.{Decoder, Encoder}
+import org.http4s.Method._
 import org.http4s._
-import org.http4s.implicits._
+import org.http4s.circe._
 import org.http4s.client.Client
 import org.http4s.client.dsl.Http4sClientDsl
-import org.http4s.circe._
-import org.http4s.Method._
-import org.http4s.Status.Successful
-import org.http4s.headers.`Content-Type`
+import org.http4s.implicits._
 
 trait Jokes[F[_]]{
   def get: F[Jokes.Joke]

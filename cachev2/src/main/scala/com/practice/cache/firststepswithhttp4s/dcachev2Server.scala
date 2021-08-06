@@ -1,11 +1,9 @@
-package com.practice.cache
+package com.practice.cache.firststepswithhttp4s
 
 import cats.effect.{ConcurrentEffect, Timer}
-import cats.implicits._
+import com.practice.cache.{HelloWorld, Jokes}
 import fs2.Stream
-import org.http4s.client.Client
 import org.http4s.client.blaze.BlazeClientBuilder
-import org.http4s.implicits._
 import org.http4s.server.blaze.BlazeServerBuilder
 import org.http4s.server.middleware.Logger
 
